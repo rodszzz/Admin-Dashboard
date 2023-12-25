@@ -1,0 +1,26 @@
+.container {
+  border: 1px solid #000;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.sidebar {
+  background: lightgray;
+}
+
+.sidebar-link {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  background: lightblue;
+}
+
+.header-h1 {
+  margin: 0px;
+}
+
+.posts {
+  background: lightcyan;
+}
