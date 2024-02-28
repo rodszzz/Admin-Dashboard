@@ -1,26 +1,82 @@
-.grid-container {
-  border: 1px solid #000;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --dark-text: rgb(65, 69, 81);
+  --light-text: rgb(130, 132, 144);
+  --hover-link: rgb(45, 109, 212);
+  --background-col: rgb(246 247 251);
 }
 
-.sidebar {
-  background: lightgray;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.sidebar-link {
-  text-decoration: none;
-  color: black;
+body {
+  background-color: var(--background-col);
+  color: var(--light-text);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
-.header {
-  background: lightblue;
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-text);
+  margin-bottom: 10px;
 }
 
-.header-h1 {
-  margin: 0px;
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
-.posts {
-  background: lightcyan;
+p,
+p a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--light-text);
+  line-height: 1.4;
+}
+
+p a:hover {
+  color: var(--hover-link);
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+::placeholder {
+  font-family: 'Roboto', sans-serif;
+  color: var(--light-text);
+  font-size: 16px;
+  opacity: 0;
+}
+
+input,
+input:focus input:focus:not(:placeholder-shown) {
+  background-color: rgb(233, 235, 243);
+  border-radius: 30px;
+  border: none;
+  color: var(--dark-text);
+  font-family: 'Roboto', sans-serif;
+  outline: none;
+  padding: 10px 20px;
+  transition: width 0.3s;
+  width: 250px;
+}
+
+input:not(:focus):placeholder-shown {
+  background-image: url(assets/search.svg);
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
 }
